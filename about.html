@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="了解 AI Fieldnotes 的 AGENTS.md 開發規則、資料結構與內容擴充流程。"><meta name="theme-color" content="#f7f6f2">
+  <title>關於這個專案｜AI Fieldnotes</title><link rel="icon" href="images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <div class="top-strip"><div class="container strip-inner"><span>✳ A SMALL FIELD GUIDE TO BIG AI IDEAS</span><span>THE RULES BEHIND THE PAGES</span></div></div>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">✳</span><span>AI <strong>Fieldnotes.</strong></span></a><nav class="main-nav" aria-label="主要選單"><a href="index.html#explore">探索概念</a><a href="index.html#path">學習路線</a><a class="nav-current" href="about.html">關於本站</a></nav><button class="header-random" type="button" data-random>隨機學一個 <span aria-hidden="true">↗</span></button></div></header>
+  <main id="main" class="container about-main">
+    <div class="breadcrumb"><a href="index.html">首頁</a><span>/</span><strong>關於本站</strong></div>
+    <section class="about-hero"><p class="eyebrow eyebrow-dark">WHY THIS PROJECT EXISTS / A RULE-DRIVEN WEBSITE</p><h1>不是只做一個網頁。<br><em>而是設計一種持續學習的方式。</em></h1><p>AI Fieldnotes 是一個以繁體中文整理生成式 AI 概念的小型知識庫。本專案把內容放在單一資料檔，並用 <code>AGENTS.md</code> 定義 AI 日後的開發規則，讓每一篇新筆記都能保有相同品質與閱讀體驗。</p><a class="button button-primary" href="AGENTS.md">閱讀完整 AGENTS.md ↗</a></section>
+    <section class="about-section"><p class="eyebrow eyebrow-dark">01 / THE PRINCIPLES</p><h2>三條不會改變的原則。</h2><div class="about-principles"><article><span>01</span><h3>看得懂</h3><p>每篇都從一句話、生活比喻、三個機制步驟開始，降低專有名詞的門檻。</p></article><article><span>02</span><h3>格式一致</h3><p>每篇都有應用、誤解、術語與單選測驗，並透過同一個模板自動排版。</p></article><article><span>03</span><h3>持續擴充</h3><p>新增內容只修改資料檔，不必複製 HTML；程式會自動把新概念顯示在首頁。</p></article></div></section>
+    <section class="about-section"><p class="eyebrow eyebrow-dark">02 / THE WORKFLOW</p><h2>下一篇筆記，要怎麼長出來？</h2><div class="workflow"><div><b>1</b><h3>閱讀規則</h3><p>AI 先看 <code>AGENTS.md</code>，確認內容欄位、命名與驗收標準。</p></div><div><b>2</b><h3>新增資料</h3><p>在 <code>data/topics.js</code> 新增符合 schema 的概念物件。</p></div><div><b>3</b><h3>執行驗證</h3><p>執行 <code>node tests/validate-content.mjs</code>，修正缺漏或格式錯誤。</p></div><div><b>4</b><h3>自動發布</h3><p>提交到 GitHub 的 <code>main</code>，GitHub Pages 便能更新網站內容。</p></div></div></section>
+    <section class="about-section about-bottom"><p class="eyebrow eyebrow-dark">03 / A CONCRETE EXAMPLE</p><h2>向 AI 下達一個清楚的任務。</h2><div class="prompt-sample"><div class="prompt-top"><span>EXAMPLE PROMPT</span><span>↗</span></div><p>「請先閱讀 AGENTS.md，依照既有資料格式新增『AI Agent』主題。內容必須包含三個運作步驟、兩個真實案例、兩個常見誤解、三個英文名詞和一題測驗。不要修改其他既有主題。完成後執行內容驗證。」</p></div><p class="about-fineprint">這套方式的重點不是讓 AI 每次重新生成一個網站，而是讓它遵照同一份規則，安全、快速且一致地擴充內容。</p></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a href="index.html" class="footer-brand">✳ AI Fieldnotes.</a><p>Systems make consistency possible.</p><span>© <span id="year">2026</span> AI Fieldnotes · Made for learning.</span></div></footer>
+  <script src="data/topics.js"></script><script src="assets/shared.js"></script>
+</body>
+</html>

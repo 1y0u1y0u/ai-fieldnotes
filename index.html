@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI Fieldnotes：一個可持續擴充的生成式 AI 概念學習網站，用短篇筆記、實例與測驗，建立自己的 AI 知識地圖。">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>AI Fieldnotes｜把 AI 學成自己的知識</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <div class="top-strip"><div class="container strip-inner"><span>✳ A SMALL FIELD GUIDE TO BIG AI IDEAS</span><span>FREE TO EXPLORE · VERSION 1.0</span></div></div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="AI Fieldnotes 首頁"><span class="brand-mark">✳</span><span>AI <strong>Fieldnotes.</strong></span></a>
+    <nav class="main-nav" aria-label="主要選單"><a class="nav-current" href="index.html#explore">探索概念</a><a href="index.html#path">學習路線</a><a href="about.html">關於本站</a></nav>
+    <button class="header-random" type="button" data-random>隨機學一個 <span aria-hidden="true">↗</span></button>
+  </div></header>
+  <main id="main">
+    <section class="hero container" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <div class="hero-eyebrow"><span class="eyebrow-dot"></span> FOR THE CURIOUS MINDS / 給所有好奇的學習者</div>
+        <h1 id="heroTitle">把複雜的 AI，<br><span>學成自己的知識。</span></h1>
+        <p class="hero-description">從 Transformer 到生成式模型，不必一次讀懂所有名詞。每次用五分鐘，拆解一個概念，慢慢建立自己的 AI 知識地圖。</p>
+        <div class="hero-search"><span class="search-icon" aria-hidden="true">⌕</span><label class="sr-only" for="topicSearch">搜尋 AI 概念</label><input id="topicSearch" type="search" placeholder="搜尋概念、英文術語或關鍵字…" autocomplete="off"><button id="clearSearch" type="button" aria-label="清空搜尋" hidden>✕</button><span class="shortcut" aria-hidden="true">Ctrl K</span></div>
+        <div class="hero-pills"><span>試試搜尋：</span><a href="#explore" data-search-suggestion="Transformer">Transformer ↗</a><a href="#explore" data-search-suggestion="RAG">RAG ↗</a><a href="#explore" data-search-suggestion="生成">生成模型 ↗</a></div>
+      </div>
+      <div class="hero-visual" aria-label="Transformer 的上下文注意力概念示意圖" role="img">
+        <div class="demo-top"><span>FIELDNOTE / 001</span><span class="demo-status"><i></i> CONCEPT IN FOCUS</span></div>
+        <div class="demo-orbit"><div class="orbit outer-orbit"></div><div class="orbit inner-orbit"></div><span class="orbit-symbol">✳</span><span class="orbit-point dot-a"></span><span class="orbit-point dot-b"></span><span class="orbit-point dot-c"></span><span class="orbit-point dot-d"></span></div>
+        <div class="demo-main"><span class="demo-overline">TODAY'S CONCEPT</span><h2>Transformer<span>.</span></h2><p>文字不只是順序，<br>更是彼此之間的關係。</p></div>
+        <div class="demo-flow"><span>INPUT</span><i></i><span>ATTENTION</span><i></i><span>MEANING</span></div>
+        <a class="demo-link" href="topic.html?slug=transformer">打開這張學習卡 <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-side-label" aria-hidden="true">LEARN / CONNECT / CREATE</div>
+    </section>
+    <section class="stats-wrap"><div class="container stats-grid">
+      <div class="stat"><span class="stat-num"><span id="conceptCount">6</span><small>+</small></span><span class="stat-label">精選 AI 概念</span></div>
+      <div class="stat"><span class="stat-num"><span id="categoryCount">4</span><small>種</small></span><span class="stat-label">知識分類</span></div>
+      <div class="stat"><span class="stat-num">05<small>min</small></span><span class="stat-label">每篇短時閱讀</span></div>
+      <div class="stat stat-last"><span class="stat-marker">✳</span><span class="stat-note">小知識，<br>慢慢累積成大理解。</span></div>
+    </div></section>
+    <section class="section container explore-section" id="explore" aria-labelledby="exploreTitle">
+      <div class="section-heading"><div><p class="eyebrow eyebrow-dark">01 / THE KNOWLEDGE LIBRARY</p><h2 id="exploreTitle">挑一個好奇的概念<span class="title-star">✳</span></h2><p>每張卡片都有白話解釋、運作流程和一題自我測驗。</p></div><span class="section-aside">FOLLOW YOUR CURIOSITY. ↗</span></div>
+      <div class="library-controls"><div class="filters" role="group" aria-label="依照主題篩選"><button type="button" class="filter is-active" data-category="all" aria-pressed="true">全部概念</button><button type="button" class="filter" data-category="core" aria-pressed="false">核心原理</button><button type="button" class="filter" data-category="generation" aria-pressed="false">生成模型</button><button type="button" class="filter" data-category="application" aria-pressed="false">實務應用</button><button type="button" class="filter" data-category="practice" aria-pressed="false">使用技巧</button></div><label class="saved-filter"><input id="savedOnly" type="checkbox"><span>♡ 只看收藏</span></label></div>
+      <p class="result-count" id="resultCount" role="status" aria-live="polite">共找到 6 個概念</p>
+      <div id="topicGrid" class="topic-grid" aria-label="概念卡片列表"></div>
+      <div id="emptyState" class="empty-state" hidden><div>⌕</div><h3>沒有找到符合條件的概念</h3><p>可以換個關鍵字，或清除篩選後再試一次。</p><button class="button button-dark" type="button" id="resetFilters">清除所有篩選</button></div>
+    </section>
+    <section class="path-section" id="path" aria-labelledby="pathTitle"><div class="container">
+      <div class="section-heading path-heading"><div><p class="eyebrow eyebrow-light">02 / A SIMPLE LEARNING PATH</p><h2 id="pathTitle">不知道從哪開始？<br>照著這條路線走。</h2></div><p>從基本概念，到生成原理，再走向實際應用。<br>沒有唯一的學習順序，但可以有一個舒服的起點。</p></div>
+      <div class="path-grid">
+        <a href="topic.html?slug=large-language-model" class="path-item"><span class="path-index">STEP 01</span><div class="path-art">01<span>↗</span></div><span class="path-tag">UNDERSTAND / 認識基礎</span><h3>先理解 AI<br>怎麼處理文字</h3><p>從 LLM 和 Transformer 建立基本觀念。</p><span class="path-link">開始第一步 →</span></a>
+        <a href="topic.html?slug=diffusion-model" class="path-item"><span class="path-index">STEP 02</span><div class="path-art">02<span>↗</span></div><span class="path-tag">GENERATE / 探索生成</span><h3>看看內容<br>如何被創造</h3><p>對照擴散模型與 GAN 的生成方式。</p><span class="path-link">開始第二步 →</span></a>
+        <a href="topic.html?slug=rag" class="path-item"><span class="path-index">STEP 03</span><div class="path-art">03<span>↗</span></div><span class="path-tag">APPLY / 帶進生活</span><h3>把知識<br>變成實用工具</h3><p>結合 RAG 與提示詞設計，開始實作。</p><span class="path-link">開始第三步 →</span></a>
+      </div>
+    </div></section>
+    <section class="container outro-section"><div class="outro-copy"><span>BUILT TO GROW, ONE NOTE AT A TIME.</span><h2>今天學一個，<br><em>明天再加一個。</em></h2><p>這不只是六篇筆記，而是一個有明確規則、可以讓 AI 持續擴充的學習網站。</p><a class="button button-primary" href="about.html">看看網站如何持續成長 ↗</a></div><div class="outro-symbol" aria-hidden="true">✳</div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a href="index.html" class="footer-brand">✳ AI Fieldnotes.</a><p>Keep learning. Keep asking questions.</p><span>© <span id="year">2026</span> AI Fieldnotes · Made for learning.</span></div></footer>
+  <script src="data/topics.js"></script><script src="assets/shared.js"></script><script src="assets/app.js"></script>
+</body>
+</html>
